@@ -39,4 +39,12 @@ public class GreetingController {
     ) {
         return greetingService.deleteGreeting(id);
     }
+
+    @PutMapping("/update/{id}")
+    public String updateID(
+            @PathVariable(value = "id") int id,
+            @RequestBody GreetingDto greetingDto
+    ) {
+        return greetingService.updateGreeting(id, greetingDto);
+    }
 }

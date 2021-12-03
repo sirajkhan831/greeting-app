@@ -46,4 +46,10 @@ public class GreetingService {
         greetingRepo.deleteById(id);
         return "Message deleted successfully";
     }
+
+    public String updateGreeting(int id, GreetingDto greetingDto) {
+        greetingRepo.deleteById(id);
+        addGreeting(greetingDto);
+        return "Update Successful";
+    }
 }
