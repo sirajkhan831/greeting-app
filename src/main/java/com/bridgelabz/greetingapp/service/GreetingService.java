@@ -26,6 +26,15 @@ public class GreetingService {
                 }).collect(Collectors.toList());
     }
 
+    public List<GreetingDto> getMessage(int id) {
+        return greetingRepo.findById(id).stream().map(
+                greetingEntity -> {
+                    GreetingDto greetingDto = new GreetingDto();
+                    greetingDto.setMessage(greetingEntity.getMessage());
+                    return greetingDto;
+                }).collect(Collectors.toList());
+    }
+
     public String addGreeting(GreetingDto greetingDto) {
         GreetingEntity greetingEntity = new GreetingEntity();
         greetingEntity.setMessage(greetingDto.getMessage());

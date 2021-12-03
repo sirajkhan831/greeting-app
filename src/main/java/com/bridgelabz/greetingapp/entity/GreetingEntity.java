@@ -3,7 +3,6 @@ package com.bridgelabz.greetingapp.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "greeting")

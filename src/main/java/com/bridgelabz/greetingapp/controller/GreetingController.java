@@ -25,4 +25,11 @@ public class GreetingController {
     ) {
         return greetingService.addGreeting(greetingDto);
     }
+
+    @GetMapping("/{id}")
+    public List<GreetingDto> getByID(
+            @PathVariable(value = "id") int id
+    ) {
+        return greetingService.getMessage(id);
+    }
 }
