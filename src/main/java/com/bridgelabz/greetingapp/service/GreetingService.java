@@ -41,4 +41,9 @@ public class GreetingService {
         greetingRepo.save(greetingEntity);
         return "Message added successfully";
     }
+
+    public String deleteGreeting(int id) {
+        greetingRepo.deleteById(id);
+        return "Message deleted successfully";
+    }
 }

@@ -32,4 +32,11 @@ public class GreetingController {
     ) {
         return greetingService.getMessage(id);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteByID(
+            @PathVariable("id") int id
+    ) {
+        return greetingService.deleteGreeting(id);
+    }
 }
